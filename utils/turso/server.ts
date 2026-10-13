@@ -1,0 +1,6 @@
+import {assertInstallation} from '@/lib/installation'
+import {headers} from 'next/headers'
+import {auth} from '@/lib/auth'
+import {client} from '@/db'
+import {TursoQueryBuilder} from './query'
+export async function createClient(){const h=await headers();await assertInstallation(h.get('host')||'');const session=await auth.api.getSession({headers:h});return {from:(table:string)=>new TursoQueryBuilder(client,table,session?.user.id||''),auth:{getUser:async()=>({data:{user:session?{...session.user,user_metadata:{full_name:session.user.name}}:null},error:null}),signInWithPassword:async({email,password}:{email:string,password:string})=>{try{const result=await auth.api.signInEmail({headers:h,body:{email:email.trim().toLowerCase(),password}});return {data:{user:result.user},error:null}}catch{return {data:null,error:{message:'Email atau password salah.'}}}},signUp:async({email,password,options}:any)=>{try{const result=await auth.api.signUpEmail({headers:h,body:{email:email.trim().toLowerCase(),password,name:options?.data?.full_name||email}});return {data:{user:result.user},error:null}}catch{return {data:null,error:{message:'Akun gagal dibuat. Periksa email dan password.'}}}},signOut:async()=>{await auth.api.signOut({headers:h})}}}}

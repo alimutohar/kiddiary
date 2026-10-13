@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfbf7;
+  --foreground: #1e293b;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-light: #e0e7ff;
+  --secondary: #f59e0b;
+  --secondary-hover: #d97706;
+  --accent: #10b981;
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --border: #f1f5f9;
+  --muted: #64748b;
+  --muted-background: #f8fafc;
+}
+
+@theme {
+  --color-brand-primary: #6366f1;
+  --color-brand-secondary: #f59e0b;
+  --color-brand-accent: #10b981;
+  --color-brand-rose: #f43f5e;
+  --color-brand-sky: #0ea5e9;
+  --color-brand-bg: #fdfbf7;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Micro animations & utility classes */
+.kid-gradient-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
+}
+
+.kid-card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.07), 0 8px 10px -6px rgba(99, 102, 241, 0.04);
+}
+
+.kid-border {
+  border: 2px solid #eef2f6;
+}

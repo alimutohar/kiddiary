@@ -1,0 +1,38 @@
+{
+  "name": "kiddiary",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run db:push && next build --webpack",
+    "start": "next start",
+    "lint": "next lint",
+    "verify-guard": "node scripts/verify-safe-guard.mjs",
+    "db:push": "node --use-system-ca scripts/inject-schema.mjs",
+    "test:db": "node scripts/test-database.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.475.0",
+    "next": "^16.3.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwind-merge": "^3.0.1",
+    "@libsql/client": "^0.14.0",
+    "better-auth": "^1.1.21",
+    "drizzle-orm": "^0.45.4",
+    "jose": "^6.2.12",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.9",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^4.0.9",
+    "typescript": "^5.7.3",
+    "vercel": "^62.2.0"
+  },
+  "type": "module"
+}

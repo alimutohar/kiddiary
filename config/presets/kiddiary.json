@@ -1,0 +1,33 @@
+{
+  "id": "kiddiary-default",
+  "name": "KidDiary Dual-Space Edition",
+  "niche": "Child Growth, Good Habits & Daily Worship Tracker",
+  "theme": {
+    "palette": "playful-warm",
+    "primaryColor": "#6366f1",
+    "primaryHover": "#4f46e5",
+    "secondaryColor": "#f59e0b",
+    "backgroundColor": "#fdfbf7",
+    "cardBackgroundColor": "#ffffff",
+    "textColor": "#1e293b",
+    "mutedTextColor": "#64748b",
+    "accentGlow": "rgba(99, 102, 241, 0.15)",
+    "borderRadius": "1.25rem"
+  },
+  "brand": {
+    "name": "KidDiary",
+    "tagline": "Niat Baik, Langkah Nyata Menemani Tumbuh Kembang Si Kecil",
+    "badge": "🌈 Dual Space Edition",
+    "logoText": "KidDiary",
+    "contactEmail": "halo@kiddiary.app"
+  },
+  "hero": {
+    "badge": "🌈 Pendamping Tumbuh Kembang & Karakter Mulia",
+    "title": "Buku Harian, Tracker Ibadah & Kebiasaan Positif Anak",
+    "subtitle": "Membangun generasi cerdas dan berkarakter mulia lewat gamifikasi bintang motivasi, pencatatan ibadah harian, serta kolaborasi aman antara orang tua dan guru.",
+    "ctaText": "Mulai Petualangan Anak",
+    "ctaUrl": "/dashboard",
+    "secondaryCtaText": "Lihat Demo",
+    "secondaryCtaUrl": "#preview"
+  }
+}
