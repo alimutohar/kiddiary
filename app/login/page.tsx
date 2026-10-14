@@ -99,6 +99,7 @@ export default function LoginPage() {
               )}
             </button>
           </form>
+          <p className="mt-5 text-center text-sm"><Link href="/recover-owner" className="text-indigo-400 underline">Lupa password akun pemilik?</Link></p>
 
           <div className="mt-8 pt-6 border-t border-slate-800 text-center">
             <p className="text-sm text-slate-400">
